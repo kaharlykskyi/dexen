@@ -80,9 +80,10 @@ section .item-block {
     margin-bottom: 30px;
     background-image: url('http://placehold.it/250x250');
 }
-section div.sale {
+section .sale {
     min-height: 100px;
-    background: #CBCBCB;
+    background: rgba(204, 204, 204, 0.74);
+    margin-bottom: 0;
 }
 
 footer {
@@ -122,4 +123,49 @@ footer .info-phone {
     display: inline;
     font-size: 17px;
     color: #ccc;
+}
+
+/*DELETE*/
+.sample {
+    font-size: 14px;
+}
+
+/*PRODUCT CSS*/
+section .filters {
+    min-height: 600px;
+    background: rgba(204, 204, 204, 0.74)
+}
+.filter-title {
+    font-size: 19px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+section .product {
+    height: 1100px;
+    background: rgba(204, 204, 204, 0.74);
+    padding: 30px 15px;
+}
+
+.product-image {
+    height: 250px;
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+}
+
+.product-title {
+    font-size: 20px;
+}
+
+.product-char {
+    margin: 20px 0 25px 5px;
+}
+
+.product-char ul li {
+    padding-bottom: 5px;
+    list-style: none;
+    font-size: 15px;
+}
+span.type {
+    font-weight: bold;
 }
