@@ -76,6 +76,96 @@ section {
     min-height: 300px;
 }
 section .item-block {
+    min-height: 250px;
+    margin-bottom: 30px;
+    background-image: url('http://placehold.it/250x250');
+}
+section .sale {
     min-height: 100px;
-    background: #fff;
+    background: rgba(204, 204, 204, 0.74);
+    margin-bottom: 0;
+}
+
+footer {
+    padding-top: 10px;
+    margin-top: 30px;
+    min-height: 40px;
+}
+footer .footer-logo {
+    color: #ffffff;
+    font-size: 30px;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #6b6d68 29%, #d9e8f0 66%, #fffeee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer .footer {
+    border-top: 1px solid rgba(204, 204, 204, 0.32);
+}
+footer .wrap-text {
+    min-height: 40px;
+    text-align: right;
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+footer .info-text {
+    display: inline;
+    font-size: 14px;
+    color: #ccc;
+}
+footer .info-phone {
+    display: inline;
+    font-size: 17px;
+    color: #ccc;
+}
+
+/*DELETE*/
+.sample {
+    font-size: 14px;
+}
+
+/*PRODUCT CSS*/
+section .filters {
+    min-height: 600px;
+    background: rgba(204, 204, 204, 0.74)
+}
+.filter-title {
+    font-size: 19px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+section .product {
+    height: 1100px;
+    background: rgba(204, 204, 204, 0.74);
+    padding: 30px 15px;
+}
+
+.product-image {
+    height: 250px;
+    width: 250px;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+}
+
+.product-title {
+    font-size: 20px;
+}
+
+.product-char {
+    margin: 20px 0 25px 5px;
+}
+
+.product-char ul li {
+    padding-bottom: 5px;
+    list-style: none;
+    font-size: 15px;
+}
+span.type {
+    font-weight: bold;
 }
