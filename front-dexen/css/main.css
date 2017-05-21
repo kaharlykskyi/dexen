@@ -10,6 +10,14 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #ddd;
+
+}
+
 .logo {
     color: #ffffff;
     font-size: 60px;
@@ -75,16 +83,6 @@ section {
     max-height: 300px;
     min-height: 300px;
 }
-section .item-block {
-    min-height: 250px;
-    margin-bottom: 30px;
-    background-image: url('http://placehold.it/250x250');
-}
-section .sale {
-    min-height: 100px;
-    background: rgba(204, 204, 204, 0.74);
-    margin-bottom: 0;
-}
 
 footer {
     padding-top: 10px;
@@ -125,47 +123,78 @@ footer .info-phone {
     color: #ccc;
 }
 
-/*DELETE*/
-.sample {
-    font-size: 14px;
+.main-head {
+    color: #fff;
+    text-shadow: 1px 1px #000;
 }
 
-/*PRODUCT CSS*/
-section .filters {
-    min-height: 600px;
-    background: rgba(204, 204, 204, 0.74)
-}
-.filter-title {
-    font-size: 19px;
-    text-align: center;
-    padding: 30px 0;
-}
+.wrap-product {
+    background: #fff;
+    border-radius: 4px;
 
-section .product {
-    height: 1100px;
-    background: rgba(204, 204, 204, 0.74);
-    padding: 30px 15px;
+    -webkit-box-shadow: 0 0 11px 0 rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 11px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 11px 0 rgba(0,0,0,0.5);
 }
-
-.product-image {
-    height: 250px;
-    width: 250px;
-    border: 1px solid rgba(0, 0, 0, 0.19);
+.product-img {
+    height: 180px;
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    margin: 15px 0;
 }
-
-.product-title {
-    font-size: 20px;
+.product-img img {
+    max-height: 100%;
+    max-width: 100%;
 }
-
-.product-char {
-    margin: 20px 0 25px 5px;
+.product-name {
+    color: #222;
 }
-
-.product-char ul li {
-    padding-bottom: 5px;
-    list-style: none;
-    font-size: 15px;
+.price {
+    font-weight: bold;
+    color: #4f9e4f;
+    font-size: 17px;
 }
-span.type {
+.price-grn {
+    color: #4f9e4f;
     font-weight: bold;
 }
+.old-price {
+    text-decoration: line-through;
+    font-size: 12px;
+    color: darkred;
+}
+.btn-row {
+    margin: 15px -15px;
+    position: relative;
+}
+.btn-bot-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.btn-cor {
+    color: #fff;
+    background-color: #380401;
+    border-color: #1e0503;
+}
+.btn-cor:hover {
+    color: #fff;
+    background-color: #2b0401;
+    border-color: #1e0503;
+}
+.btn-success {
+    color: #fff;
+    background-color: #4f9e4f;
+    border-color: #3f8a3f;
+}
+.btn-success:hover {
+    color: #fff;
+    background-color: #4bb44b;
+    border-color: #3d983d;
+}
+/*.btn-success:hover {*/
+    /*color: #fff;*/
+    /*background-color: #4f9e4f;*/
+    /*border-color: #3f8a3f;*/
+/*}*/
