@@ -14,7 +14,7 @@ class m170520_153643_create_product_clock_table extends Migration
     {
 
         Yii::$app->db->createCommand('
-            CREATE TABLE product_clock (
+            CREATE TABLE clock (
             `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
             `name` VARCHAR(255) NOT NULL,
             `image_main` VARCHAR(255) NOT NULL,
@@ -50,6 +50,6 @@ class m170520_153643_create_product_clock_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('product_clock');
+        $this->dropTable('clock');
     }
 }
