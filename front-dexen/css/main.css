@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Lato" rel="stylesheet');
-* { margin: 0; padding: 0; }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /*background: url("http://joxi.net/8An0JkaU5p4emO.jpg");*/
+    /*background-attachment: fixed;*/
+
+}
+
 body {
-    background: radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px;
+    /*background: none;*/
+    /*background: radial-gradient(#000 15%, transparent 16%) 0 0,*/
+    /*radial-gradient(#000 15%, transparent 16%) 8px 8px,*/
+    /*radial-gradient(rgba(255,255,255,0.1) 15%, transparent 20%) 0 1px,*/
+    /*radial-gradient(rgba(255,255,255,0.1) 15%, transparent 20%) 8px 9px;*/
+    /*background-color: #333;*/
+    /*background-size: 16px 16px;*/
+    background-image: url("chrome://global/skin/media/imagedoc-darknoise.png");
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -15,12 +28,15 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 hr {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 0;
     border-top: 1px solid #ddd;
-
 }
 
 .logo {
@@ -29,7 +45,7 @@ hr {
     display: inline-block;
     font-weight: bold;
     padding: 15px 0 15px 0;
-    margin: 35px 0 0 80px;
+    margin: 60px 0 0 40px;
     border-bottom: 2px solid #d9e8f0;
     text-transform: uppercase;
     background: linear-gradient(45deg, #6b6d68 29%, #d9e8f0 66%, #fffeee);
@@ -37,9 +53,11 @@ hr {
     -webkit-text-fill-color: transparent;
     height: 55px;
 }
+
 .logo:hover {
     color: #ffffff;
 }
+
 .wrap-head-navbar {
     /*background: #2f0304;*/
     background: rgba(43, 4, 1, 0.91);
@@ -56,22 +74,32 @@ hr {
     border-bottom-left-radius: 25px;
     border: 1px dashed #fff;
 }
+
 .head-navbar > li > a {
     color: #fff;
 }
+
 .head-navbar > li:first-child {
     margin-left: 20px;
 }
+
 .head-navbar > li > a:hover {
     background: rgba(56, 4, 1, 0.93);
     transition: 0.3s;
 }
+
+.head-navbar > li > a:focus {
+    background: rgba(56, 4, 1, 0.93);
+    transition: 0.3s;
+}
+
 .head-info {
     color: #fff;
     height: 65px;
     text-align: right;
     vertical-align: middle;
 }
+
 .phone {
     display: inline;
     font-size: 18px;
@@ -89,117 +117,160 @@ section {
     min-height: 300px;
 }
 
-footer {
-    padding-top: 10px;
-    margin-top: 30px;
-    min-height: 40px;
-}
-footer .footer-logo {
-    color: #ffffff;
-    font-size: 30px;
-    display: inline-block;
-    float: left;
-    font-weight: bold;
-    padding: 10px 10px;
-    text-transform: uppercase;
-    background: linear-gradient(45deg, #6b6d68 29%, #d9e8f0 66%, #fffeee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-footer .footer {
-    border-top: 1px solid rgba(204, 204, 204, 0.32);
-}
-footer .wrap-text {
-    min-height: 40px;
-    text-align: right;
-    vertical-align: middle;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-footer .info-text {
-    display: inline;
-    font-size: 14px;
-    color: #ccc;
-}
-footer .info-phone {
-    display: inline;
-    font-size: 17px;
-    color: #ccc;
-}
-
 .main-head {
     color: #fff;
-    text-shadow: 1px 1px #000;
+    text-shadow: 1px 1px 0 #000;
 }
 
 .wrap-product {
     background: #fff;
     border-radius: 4px;
 
-    -webkit-box-shadow: 0 0 11px 0 rgba(0,0,0,0.5);
-    -moz-box-shadow: 0 0 11px 0 rgba(0,0,0,0.5);
-    box-shadow: 0 0 11px 0 rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.5);
 }
+
 .product-img {
     height: 180px;
     display: flex;
-    align-items : center;
+    align-items: center;
     justify-content: center;
     margin: 15px 0;
 }
+
 .product-img img {
     max-height: 100%;
     max-width: 100%;
 }
+
 .product-name {
     color: #222;
 }
+
 .price {
     font-weight: bold;
     color: #4f9e4f;
     font-size: 17px;
 }
+
 .price-grn {
     color: #4f9e4f;
     font-weight: bold;
 }
+
 .old-price {
     text-decoration: line-through;
     font-size: 12px;
     color: darkred;
 }
+
 .btn-row {
     margin: 15px -15px;
     position: relative;
 }
+
 .btn-bot-right {
     position: absolute;
     right: 0;
     bottom: 0;
 }
+
 .btn-cor {
     color: #fff;
     background-color: #380401;
     border-color: #1e0503;
 }
+
 .btn-cor:hover {
     color: #fff;
     background-color: #2b0401;
     border-color: #1e0503;
 }
+
 .btn-success {
     color: #fff;
     background-color: #4f9e4f;
     border-color: #3f8a3f;
 }
+
 .btn-success:hover {
     color: #fff;
     background-color: #4bb44b;
     border-color: #3d983d;
 }
-/*.btn-success:hover {*/
-    /*color: #fff;*/
-    /*background-color: #4f9e4f;*/
-    /*border-color: #3f8a3f;*/
+
+/*.head-description {*/
+/*background: #fff;*/
+/*border: 1px solid #ddd;*/
+/*border-radius: 5px;*/
 /*}*/
+/*.inner-head-description {*/
+/*border: 1px dashed #000;*/
+/*background: #fff;*/
+/*border-radius: 4px;*/
+/*margin: 10px;*/
+/*padding: 15px;*/
+/*}*/
+/*.inner-head-description p {*/
+/*color: #000;*/
+/*}*/
+
+.head-description {
+    background: rgba(43, 4, 1, 0.91);
+    border-radius: 5px;
+    border: 1px solid #1e0503;
+}
+
+.inner-head-description {
+    border: 1px dashed #fff;
+    background: rgba(43, 4, 1, 0.91);
+    border-radius: 4px;
+    margin: 7px;
+    padding: 15px;
+}
+
+.inner-head-description p {
+    color: #fff;
+    text-align: justify;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+.footer {
+    border-top: 1px solid #666;
+}
+
+.footer .inner-footer {
+    font-size: 14px;
+    margin: 2px 2px 0;
+    padding: 15px;
+    border-bottom: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    /*background: #202020;*/
+    color: #fff;
+}
+
+.footer .inner-footer a {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
