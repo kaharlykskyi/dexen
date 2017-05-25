@@ -23,6 +23,7 @@ use Yii;
  * @property integer $count
  * @property integer $display
  * @property integer $hot_price
+ * @property integer $purchase_price
  * @property string $description
  */
 class Portmone extends \yii\db\ActiveRecord
@@ -41,9 +42,9 @@ class Portmone extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'image_main', 'images', 'manufacture', 'price', 'gender', 'material', 'width', 'heigth', 'depth', 'type', 'in_stock', 'count', 'display', 'description'], 'required'],
+            [['name', 'image_main', 'images', 'manufacture', 'price', 'gender', 'material', 'width', 'heigth', 'depth', 'type', 'in_stock', 'count', 'hot_price', 'purchase_price', 'display', 'description'], 'required'],
             [['images', 'description'], 'string'],
-            [['manufacture', 'price', 'gender', 'material', 'width', 'heigth', 'depth', 'type', 'in_stock', 'count', 'display', 'hot_price'], 'integer'],
+            [['manufacture', 'price', 'gender', 'material', 'width', 'heigth', 'depth', 'type', 'in_stock', 'count', 'display', 'purchase_price', 'hot_price'], 'integer'],
             [['name', 'image_main'], 'string', 'max' => 255],
         ];
     }
@@ -69,7 +70,8 @@ class Portmone extends \yii\db\ActiveRecord
             'in_stock' => 'В наличии',
             'count' => 'Количество',
             'display' => 'Отображать на сайте',
-            'hot_price' => 'Гарячая цена',
+            'purchase_price' => 'Цена закупки',
+            'hot_price' => 'Горячая цена',
             'description' => 'Описание',
         ];
     }

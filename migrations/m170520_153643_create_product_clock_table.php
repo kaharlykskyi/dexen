@@ -38,6 +38,8 @@ class m170520_153643_create_product_clock_table extends Migration
             `color_watchband` TINYINT(255) UNSIGNED NOT NULL,
             `in_stock` TINYINT(1) UNSIGNED NOT NULL,
             `count` TINYINT(255) UNSIGNED NOT NULL,
+            `purchase_price` INT(11) UNSIGNED NOT NULL,
+            `hot_price` INT(11) UNSIGNED NOT NULL DEFAULT 0,
             `display` TINYINT(1) UNSIGNED NOT NULL,
             `description` TEXT NOT NULL
             );

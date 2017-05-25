@@ -23,6 +23,7 @@ use Yii;
  * @property integer $count
  * @property integer $display
  * @property integer $hot_price
+ * @property integer $purchase_price
  * @property string $description
  */
 class Glasses extends \yii\db\ActiveRecord
@@ -41,9 +42,9 @@ class Glasses extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'image_main', 'images', 'manufacture', 'price', 'gender', 'form', 'form_material', 'color_form', 'lens_material', 'color_lens', 'in_stock', 'count', 'display', 'description'], 'required'],
+            [['name', 'image_main', 'images', 'manufacture', 'price', 'gender', 'form', 'form_material', 'color_form', 'lens_material', 'color_lens', 'in_stock', 'count', 'display', 'description', 'purchase_price'], 'required'],
             [['images', 'description'], 'string'],
-            [['manufacture', 'price', 'gender', 'form', 'form_material', 'color_form', 'lens_material', 'color_lens', 'in_stock', 'count', 'display', 'hot_price'], 'integer'],
+            [['manufacture', 'price', 'gender', 'form', 'form_material', 'color_form', 'lens_material', 'color_lens', 'in_stock', 'count', 'display', 'hot_price', 'purchase_price'], 'integer'],
             [['name', 'image_main'], 'string', 'max' => 255],
         ];
     }
@@ -69,6 +70,7 @@ class Glasses extends \yii\db\ActiveRecord
             'in_stock' => 'В наличии',
             'count' => 'Количество',
             'display' => 'Отображать на сайте',
+            'purchase_price' => 'Цена закупки',
             'hot_price' => 'Горячая цена',
             'description' => 'Описание',
         ];

@@ -18,7 +18,7 @@ class GlassesSearch extends Glasses
     public function rules()
     {
         return [
-            [['id', 'manufacture', 'price', 'gender', 'form', 'form_material', 'color_form', 'lens_material', 'color_lens', 'in_stock', 'count', 'display', 'hot_price'], 'integer'],
+            [['id', 'manufacture', 'price', 'gender', 'form', 'form_material', 'color_form', 'lens_material', 'color_lens', 'in_stock', 'count', 'display', 'hot_price', 'purchase_price'], 'integer'],
             [['name', 'image_main', 'images', 'description'], 'safe'],
         ];
     }
@@ -72,6 +72,7 @@ class GlassesSearch extends Glasses
             'count' => $this->count,
             'display' => $this->display,
             'hot_price' => $this->hot_price,
+            'purchase_price' => $this->purchase_price,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])

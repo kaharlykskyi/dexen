@@ -56,6 +56,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'count')->textInput() ?>
 
+    <?= $form->field($model, 'hot_price')->textInput() ?>
+
+    <?= $form->field($model, 'purchase_price')->textInput() ?>
+
     <?= $form->field($model, 'display')->textInput() ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>

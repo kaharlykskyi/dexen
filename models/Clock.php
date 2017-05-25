@@ -30,6 +30,8 @@ use Yii;
  * @property integer $color_watchband
  * @property integer $in_stock
  * @property integer $count
+ * @property integer $hot_price
+ * @property integer $purchase_price
  * @property integer $display
  * @property string $description
  */
@@ -49,9 +51,9 @@ class Clock extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'image_main', 'images', 'manufacture', 'price', 'gender', 'mechanism', 'type', 'case_material', 'case_form', 'width', 'height', 'depth', 'water_resistance', 'glass', 'watchband', 'time_display', 'dial_symbols', 'color_case', 'color_watchband', 'in_stock', 'count', 'display', 'description'], 'required'],
+            [['name', 'image_main', 'images', 'manufacture', 'price', 'gender', 'mechanism', 'type', 'case_material', 'case_form', 'width', 'height', 'depth', 'water_resistance', 'glass', 'watchband', 'time_display', 'dial_symbols', 'color_case', 'color_watchband', 'in_stock', 'count', 'purchase_price', 'hot_price', 'display', 'description'], 'required'],
             [['images', 'description'], 'string'],
-            [['manufacture', 'price', 'gender', 'mechanism', 'type', 'case_material', 'case_form', 'width', 'height', 'depth', 'water_resistance', 'glass', 'watchband', 'time_display', 'dial_symbols', 'color_case', 'color_watchband', 'in_stock', 'count', 'display'], 'integer'],
+            [['manufacture', 'price', 'gender', 'mechanism', 'type', 'case_material', 'case_form', 'width', 'height', 'depth', 'water_resistance', 'glass', 'watchband', 'time_display', 'dial_symbols', 'color_case', 'color_watchband', 'in_stock','purchase_price', 'hot_price', 'count', 'display'], 'integer'],
             [['name', 'image_main'], 'string', 'max' => 255],
         ];
     }
@@ -85,6 +87,8 @@ class Clock extends \yii\db\ActiveRecord
             'color_watchband' => 'Цвет браслета/ремешка',
             'in_stock' => 'В наличие',
             'count' => 'Количество',
+            'purchase_price' => 'Цена закупки',
+            'hot_price' => 'Горячая цена',
             'display' => 'Отображать на сайте',
             'description' => 'Описание',
         ];

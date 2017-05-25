@@ -2,12 +2,14 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\StaticSource;
 use Yii;
 use app\models\Option;
 use app\modules\admin\models\OptionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use \yii\helpers\ArrayHelper;
 
 /**
  * OptionController implements the CRUD actions for Option model.
@@ -41,6 +43,25 @@ class OptionController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionClock()
+    {
+        $model = Option::find()
+            ->select([
+                'field_name',
+                'json',
+            ])
+            ->where([
+                'product_type' => StaticSource::CODE_TABLE_CLOCK,
+            ])
+            ->all();
+
+        $model = ArrayHelper::map($model, 'field_name', 'json');
+
+        return $this->render('clock', [
+            'model' => $model
         ]);
     }
 

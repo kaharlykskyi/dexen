@@ -29,6 +29,7 @@ class m170521_152653_create_product_portmone_table extends Migration
             `in_stock` TINYINT(1) UNSIGNED NOT NULL,
             `count` TINYINT(255) UNSIGNED NOT NULL,
             `display` TINYINT(1) UNSIGNED NOT NULL,
+            `purchase_price` INT(11) UNSIGNED NOT NULL,
             `hot_price` INT(11) UNSIGNED NOT NULL DEFAULT 0,
             `description` TEXT NOT NULL
             );

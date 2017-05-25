@@ -18,7 +18,7 @@ class ClockSearch extends Clock
     public function rules()
     {
         return [
-            [['id', 'manufacture', 'price', 'gender', 'mechanism', 'type', 'case_material', 'case_form', 'width', 'height', 'depth', 'water_resistance', 'glass', 'watchband', 'time_display', 'dial_symbols', 'color_case', 'color_watchband', 'in_stock', 'count', 'display'], 'integer'],
+            [['id', 'manufacture', 'price', 'gender', 'mechanism', 'type', 'case_material', 'case_form', 'width', 'height', 'depth', 'water_resistance', 'glass', 'watchband', 'time_display', 'dial_symbols', 'color_case', 'color_watchband', 'in_stock', 'count', 'purchase_price', 'hot_price', 'display'], 'integer'],
             [['name', 'image_main', 'images', 'description'], 'safe'],
         ];
     }
@@ -78,6 +78,8 @@ class ClockSearch extends Clock
             'color_case' => $this->color_case,
             'color_watchband' => $this->color_watchband,
             'in_stock' => $this->in_stock,
+            'purchase_price' => $this->purchase_price,
+            'hot_price' => $this->hot_price,
             'count' => $this->count,
             'display' => $this->display,
         ]);
