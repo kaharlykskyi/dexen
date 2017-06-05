@@ -2,12 +2,16 @@
 
 namespace app\controllers;
 
+use app\models\Clock;
+use app\models\Glasses;
+use app\models\Portmone;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\helpers\ArrayHelper;
 
 class SiteController extends Controller
 {
@@ -60,6 +64,29 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        define('COUNT_CLOCK', 3);
+        define('COUNT_GLASSES', 3);
+        define('COUNT_PORTMONE', 2);
+
+        //select count(id) to start php rand()
+        $count_clock = Clock::find()->select('id')->count('id');
+        $count_glasses = Glasses::find()->select('id')->count('id');
+        $count_portmone = Portmone::find()->select('id')->count('id');
+
+        //rand some offset from queries
+        $clock_off = rand(1, $count_clock - COUNT_CLOCK);
+        $glasses_off = rand(1, $count_glasses - COUNT_GLASSES);
+        $portmone_off = rand(1, $count_portmone - COUNT_PORTMONE);
+
+        $clocks = Clock::find()->select(['id', 'name', 'image_main', 'price', 'hot_price'])->where(['>', 'hot_price', 0])->offset($clock_off)->limit(COUNT_CLOCK)->asArray()->all();
+        $glasses = Glasses::find()->select(['id', 'name', 'image_main', 'price', 'hot_price'])->where(['>', 'hot_price', 0])->offset($glasses_off)->limit(COUNT_GLASSES)->asArray()->all();
+        $portmones = Portmone::find()->select(['id', 'name', 'image_main', 'price', 'hot_price'])->where(['>', 'hot_price', 0])->offset($portmone_off)->limit(COUNT_PORTMONE)->asArray()->all();
+
+        $main_products = ArrayHelper::merge($clocks, $glasses, $portmones);
+        shuffle($main_products);
+
+        echo '<pre>'.print_r($main_products, true).'</pre>';
+
         return $this->render('index');
     }
 

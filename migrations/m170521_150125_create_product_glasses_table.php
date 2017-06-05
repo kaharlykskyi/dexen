@@ -14,7 +14,7 @@ class m170521_150125_create_product_glasses_table extends Migration
     {
 
         Yii::$app->db->createCommand('
-            CREATE TABLE `product_glasses` (
+            CREATE TABLE `glasses` (
             `id` INT(11) AUTO_INCREMENT PRIMARY KEY,
             `name` VARCHAR(255) NOT NULL,
             `image_main` VARCHAR(255) NOT NULL,
@@ -30,6 +30,7 @@ class m170521_150125_create_product_glasses_table extends Migration
             `in_stock` TINYINT(1) UNSIGNED NOT NULL,
             `count` TINYINT(255) UNSIGNED NOT NULL,
             `display` TINYINT(1) UNSIGNED NOT NULL,
+            `purchase_price` INT(11) UNSIGNED NOT NULL,
             `hot_price` INT(11) UNSIGNED NOT NULL DEFAULT 0,
             `description` TEXT NOT NULL
             );
@@ -42,6 +43,6 @@ class m170521_150125_create_product_glasses_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('product_glasses');
+        $this->dropTable('glasses');
     }
 }
