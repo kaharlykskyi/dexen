@@ -12,14 +12,13 @@ html {
 }
 
 body {
-    /*background: none;*/
     /*background: radial-gradient(#000 15%, transparent 16%) 0 0,*/
     /*radial-gradient(#000 15%, transparent 16%) 8px 8px,*/
     /*radial-gradient(rgba(255,255,255,0.1) 15%, transparent 20%) 0 1px,*/
     /*radial-gradient(rgba(255,255,255,0.1) 15%, transparent 20%) 8px 9px;*/
     /*background-color: #333;*/
     /*background-size: 16px 16px;*/
-    background-image: url("chrome://global/skin/media/imagedoc-darknoise.png");
+    background-image: url("../img/fon.png");
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 15px;
@@ -36,7 +35,7 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
 }
 
 .logo {
@@ -99,9 +98,13 @@ hr {
     text-align: right;
     vertical-align: middle;
 }
-
-.phone {
-    display: inline;
+.head-info span {
+    margin: 0 5px;
+}
+.head-info .cart {
+    font-size: 21px;
+}
+.head-info .phone {
     font-size: 18px;
     font-weight: bold;
     line-height: 65px;
@@ -122,7 +125,7 @@ section {
     text-shadow: 1px 1px 0 #000;
 }
 
-.wrap-product {
+.wrap-hot-product {
     background: #fff;
     border-radius: 4px;
 
@@ -131,7 +134,7 @@ section {
     box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.5);
 }
 
-.product-img {
+.hot-product-img {
     height: 180px;
     display: flex;
     align-items: center;
@@ -139,12 +142,12 @@ section {
     margin: 15px 0;
 }
 
-.product-img img {
+.hot-product-img img {
     max-height: 100%;
     max-width: 100%;
 }
 
-.product-name {
+.hot-product-name {
     color: #222;
 }
 
@@ -259,18 +262,115 @@ footer {
     color: #fff;
 }
 
+.container-products {
+    background: #ffffff;
+    border-radius: 3px;
+    display: block;
+}
+.filter {
+    border-right: 1px solid #ccc;
+    margin: 25px -1px 25px 0;
+}
+.filter header {
+    margin: 2px 0 7px;
+    color: #191919;
+}
+.filter .filter-input {
+    height: 28px;
+    border: 1px solid #888;
+    border-radius: 3px;
+}
+.toPrice {
+    line-height: 28px;
+}
 
+.wr-checkbox {
+    margin-bottom: 5px;
+}
+.checkbox {
+    display: none;
+}
+.checkbox-block {
+    display: inline-block;
+    border: 1px solid #888;
+    border-radius: 3px;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    text-align: center;
+    transition: 0.5s ease;
+}
+.checkbox + label .checkbox-text {
+    vertical-align: text-top;
+}
+.checkbox + label {
+    font-weight: normal;
+    cursor: pointer;
+    width: 100%;
+}
+.checkbox + label:hover .checkbox-text {
+    color: #333;
+    transition: 0.5s;
+}
+.checkbox + label:hover .checkbox-block {
+    border-color: #444;
+    transition: 0.5s ease;
+}
+.checkbox + label > .checkbox-block > .glyphicon {
+    display: none;
+}
+.checkbox:checked + label > .checkbox-block > .glyphicon {
+    display: inline;
+    color: #4f9e4f;
+}
+.products {
+    border-left: 1px solid #ccc;
+    margin: 25px 0;
+    padding-bottom: 50px;
+    padding-right: 0;
+}
 
+.wr-product {
+    min-height: 320px;
+    position: relative;
+    border: 1px solid #ddd;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+.inner-product {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 2;
+}
+.wr-product:hover .inner-product {
+    height: 380px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 12px 1px rgba(0,0,0,0.6);
+    left: -1px;
+    top: -1px;
+    right: -1px;
+}
+.image-product {
+    width: 100%;
+    margin: 15px 0;
+    border: none;
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
 
-
-
-
-
-
-
-
-
-
-
-
-
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-product img {
+    max-height: 100%;
+    max-width: 100%;
+}
+.name-product h4 {
+    text-align: center;
+}

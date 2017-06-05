@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yz\shoppingcart\CartPositionInterface;
+use yz\shoppingcart\CartPositionTrait;
 
 /**
  * This is the model class for table "glasses".
