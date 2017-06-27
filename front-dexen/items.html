@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Dexen - имбо магаз</title>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand logo">Dexen</a>
+        </div>
+        <div class="head-info">
+                <span class="phone">
+                    +380 73 410 11 16
+                </span>
+                <span class="cart">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                </span>
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="collapse navbar-collapse">
+            <div class="nav navbar-nav navbar-right wrap-head-navbar">
+                <ul class="nav navbar-nav navbar-right head-navbar">
+                    <li class="active"><a href="index.html">Главная</a></li>
+                    <li><a href="#">Часы</a></li>
+                    <li><a href="#">Очки</a></li>
+                    <li><a href="#">Портмоне</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="col-md-12 wr-content">
+            <div class="col-md-3 filter">
+                <form action="">
+                    <!-- price -->
+                    <div class="row">
+                        <header class="col-md-12">Цена</header>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input id="price_from" name="price_from" type="text" class="form-control filter-input"
+                                       title="price_from" value="0">
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-center toPrice">
+                            -
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <input id="price_to" name="price_to" type="text" class="form-control filter-input"
+                                       value="20000" title="price_to">
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- brands -->
+                    <div class="row">
+                        <header class="col-md-12 filter-title">Бренд</header>
+                        <div class="col-md-12">
+                            <div class="wr-checkbox">
+                                <input class="checkbox" type="checkbox" id="brand_1">
+                                <label for="brand_1">
+                                    <span class="checkbox-block">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </span>
+                                    <span class="checkbox-text">
+                                        Casio
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="wr-checkbox">
+                                <input class="checkbox" type="checkbox" id="brand_2">
+                                <label for="brand_2">
+                                    <span class="checkbox-block">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </span>
+                                    <span class="checkbox-text">
+                                        Rolex
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="wr-checkbox">
+                                <input class="checkbox" type="checkbox" id="brand_3">
+                                <label for="brand_3">
+                                    <span class="checkbox-block">
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </span>
+                                    <span class="checkbox-text">
+                                        Diesel
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-9 items">
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                            <br>
+                                            <span>80000 грн</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                            <br>
+                                            <span>80000 грн</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                            <br>
+                                            <span>80000 грн</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                            <br>
+                                            <span>old price</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                            <br>
+                                            <span>80000 грн</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 wr-item">
+                    <div class="inner-item">
+                        <div class="col-md-12">
+                            <a class="image-item">
+                                <img src="img/products/ch4.jpg">
+                            </a>
+
+                            <div class="name-item">
+                                <h4><a href="#">Item Name</a></h4>
+                            </div>
+                            <div class="section-buy">
+                                <table width="100%">
+                                    <tr>
+                                        <td width="50%">
+                                            <span>15000 Грн</span>
+                                            <br>
+                                            <span>80000 грн</span>
+                                        </td>
+                                        <td width="50%" align="right" valign="bottom">
+                                            <button class="btn btn-success btn-sm">Купить</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="more-description">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Механизм:</small>
+                                        <small>механический</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Цвет:</small>
+                                        <small>серебро</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Стекло:</small>
+                                        <small>сапфировое</small>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <small class="text-muted">Запас хода:</small>
+                                        <small>48ч</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-md-offset-3 text-center" style="border-top: 1px solid red">
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 25px; margin-bottom: 25px;">Navigation page</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <div class="footer">
+            <div class="inner-footer">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Наши контакты</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Наши контакты</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Наши контакты</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Вопросы и ответы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

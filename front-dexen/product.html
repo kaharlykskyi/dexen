@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/colorbox.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/colorbox/jquery.colorbox-min.js"></script>
+    <script src="js/main.js"></script>
     <title>Dexen - имбо магаз</title>
 </head>
 <body>
@@ -29,6 +32,7 @@
                 <span class="cart">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                 </span>
+
             <div class="clearfix"></div>
         </div>
         <div class="collapse navbar-collapse">
@@ -47,96 +51,91 @@
 
 <section>
     <div class="container">
-        <div class="col-md-12 container-products">
-            <div class="col-md-3 filter">
-                <form action="">
-                    <!-- price -->
+        <div class="col-md-12 wr-content">
+            <div class="row">
+                <div class="col-md-5 pictures">
                     <div class="row">
-                        <header class="col-md-12">Цена</header>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input id="price_from" name="price_from" type="text" class="form-control filter-input" value="0">
-                            </div>
-                        </div>
-                        <div class="col-md-2 text-center toPrice">
-                            -
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <input id="price_to" name="price_to" type="text" class="form-control filter-input" value="20000">
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- brands -->
-                    <div class="row">
-                        <header class="col-md-12 filter-title">Бренд</header>
                         <div class="col-md-12">
-                            <div class="wr-checkbox">
-                                <input class="checkbox" type="checkbox" id="brand_1">
-                                <label for="brand_1">
-                                    <span class="checkbox-block">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </span>
-                                    <span class="checkbox-text">
-                                        Casio
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="wr-checkbox">
-                                <input class="checkbox" type="checkbox" id="brand_2">
-                                <label for="brand_2">
-                                    <span class="checkbox-block">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </span>
-                                    <span class="checkbox-text">
-                                        Rolex
-                                    </span>
-                                </label>
-                            </div>
-                            <div class="wr-checkbox">
-                                <input class="checkbox" type="checkbox" id="brand_3">
-                                <label for="brand_3">
-                                    <span class="checkbox-block">
-                                        <span class="glyphicon glyphicon-ok"></span>
-                                    </span>
-                                    <span class="checkbox-text">
-                                        Diesel
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-9 products">
-                <div class="col-md-4 wr-product">
-                    <div class="inner-product">
-                        <div class="col-md-12">
-                            <a class="image-product">
-                                <img src="img/products/ch4.jpg">
+                            <a href="img/products/ch4.jpg" class="wr-img-head jsColorBoxGroup">
+                                <img src="img/products/ch4.jpg" alt="clock">
                             </a>
-                            <div class="name-product">
-                                <h4><a href="#">Product Name</a></h4>
-                            </div>
-                            <div class="description-product"></div>
-                            <div class="more-description"></div>
                         </div>
-                        <!--<div class="row btn-row">-->
-                        <!--<div class="col-md-6">-->
-                        <!--<span class="price">4800</span>&nbsp;<span class="price-grn">грн</span><br>-->
-                        <!--</div>-->
-                        <!--<div class="col-md-6 btn-bot-right">-->
-                        <!--<button class="btn btn-sm btn-success">купить</button>-->
-                        <!--</div>-->
-                        <!--</div>-->
+                    </div>
+                    <div class="row row-small-pictures">
+                        <div class="col-md-3">
+                            <a href="img/products/ch1.jpg" class="wr-img-picture jsColorBoxGroup">
+                                <img src="img/products/ch1.jpg" alt="clock">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="img/products/ch2.jpg" class="wr-img-picture jsColorBoxGroup">
+                                <img src="img/products/ch2.jpg" alt="clock">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="img/products/ch3.jpg" class="wr-img-picture jsColorBoxGroup">
+                                <img src="img/products/ch3.jpg" alt="clock">
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="img/products/ch5.jpg" class="wr-img-picture jsColorBoxGroup">
+                                <img src="img/products/ch5.jpg" alt="clock">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1 shot-description">
+                    <h3 class="head-shot-description">Часы Dexen m5</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="bonus">
+                                <li>
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    <span>Сроки доставки 1-2 дня<sup>*</sup></span>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                    <span>В наличии</span>
+                                </li>
+                                <li>
+                                    <i class="glyphicon glyphicon-thumbs-up"></i>
+                                    <span>Гарантия 12 месяцев<sup>**</sup></span>
+                                </li>
+                            </ul>
+                            <div class="price">3700 грн</div>
+                            <div class="buy">
+                                <button class="btn btn-success btn-lg">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 more-info">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Характеристики</a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Описание</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <div class="col-md-12">
+                                asfas asdfasdf asdfasdf
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <div class="col-md-12">
+                                sdgfsd sdfgsd gsdfgsdfg sdfgsdfgs dfg
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 
 <footer>
